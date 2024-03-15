@@ -1,4 +1,4 @@
-const UICtransport = (svgProps) => {
+const UICtransport = (svgProps: any) => {
  return (
    <svg {...svgProps} viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' aria-labelledby='transportIconTitle' stroke='#000000' style={{ strokeWidth: 1, strokeLinecap: 'square', strokeLinejoin: 'miter' }} color='#000000'>
      <path d='M4 17H2V7H15V17H8' />

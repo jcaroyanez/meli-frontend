@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './Item.scss';
 import { CircleTransport } from '../CircleTranspor/CircleTransport';
-import { Item as ItemProps } from '../../../definitions/mode';
+import { Item as ItemProps } from '../../../definitions/model';
 
 export const Item = ({ id, title, picture, price, freeShipping }: ItemProps) => {
     return (
@@ -12,7 +12,7 @@ export const Item = ({ id, title, picture, price, freeShipping }: ItemProps) => 
             <div className='search-list-item__card-content-info'>
               <div className='search-list-item__card-content-price'>
                 <span className='price-simbol'>$</span>
-                <span className='price-mount'>{price.amount}</span>
+                <span className='price-mount'>{price?.amount}</span>
                 {freeShipping && <CircleTransport />}
               </div>
               <h3 className='search-list-item__title'>{title}</h3>

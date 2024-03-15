@@ -1,0 +1,34 @@
+.info-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+    &__subtitle {
+        font-size: 14px;
+        color: rgba(0,0,0,.55);
+        white-space: pre-wrap;
+    }
+
+    &__title {
+				margin-top: 10px;
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    &__price-wrap {
+        font-size: 36px;
+        padding-top: 15px;
+    }
+
+    &__price-symbol {
+        padding-right: 7px;
+    }
+
+		@media (min-width: $md) {
+			align-items: flex-start;
+
+			&__first-column {
+				flex-direction: row;
+			}
+		}
+}
