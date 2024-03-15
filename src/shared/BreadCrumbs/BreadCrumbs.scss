@@ -1,0 +1,22 @@
+.nav-breadcrumbs {
+    display: flex;
+    margin: 16px 0 0 0;
+    padding: 0;
+    color: #787676;
+
+    &__item {
+        display: flex;
+        list-style: none;
+				text-decoration: none;
+				color: inherit;
+    }
+
+    &__text {
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    &__arrow {
+        padding: 0 8px;
+    }
+}

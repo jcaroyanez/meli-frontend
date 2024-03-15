@@ -1,0 +1,57 @@
+.search-list-item {
+	list-style: none;
+	border-bottom: 1px solid #eee;
+	width: 100%;
+
+	&:last-child {
+			border: none;    
+	}
+
+	&__link {
+			text-decoration: none;
+	}
+
+	&__card {
+			position: relative;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 20px 50px;
+	}
+
+	&__card-content-info {
+			padding: 15px 0 15px 24px;
+	}
+
+	&__card-content-price {
+			display: flex;
+	}
+
+	&__title {
+			color: #333;
+			font-weight: 300;
+	}
+
+	@media (min-width: $sm) {
+		&__card {
+			height: 200px;
+			display: flex;
+			flex-direction: row;
+		}
+	}
+}
+
+.price-simbol {
+	margin-right: 5px;
+}
+
+.price-mount {
+	margin-right: 10px;
+}
+
+.price-simbol, .price-mount {
+	font-size: 26px;
+	color: #333;
+	font-weight: 400;
+}

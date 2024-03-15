@@ -1,0 +1,23 @@
+.content-search {
+	display: flex;
+	align-items: center;
+	width: calc(100% - 60px);
+}
+
+.search-input {
+	border: none;
+	outline: none;
+	padding: 5px 10px;
+	height: 39px;
+	font-size: 16px;
+	color: #666;
+	width: calc(100% - 49px);
+}
+
+.search-btn {
+	cursor: pointer;
+	border: none;
+	background-color: #ededed;
+	height: 39px;
+	width: 49px;
+}

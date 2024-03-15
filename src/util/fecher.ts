@@ -1,21 +1,21 @@
-export async function fercher(endpoint: string, customConfig: Request) {
+export async function fetcher<T>(endpoint: string, customConfig = {} as Request): Promise<T> {
   const headers = {'content-type': 'application/json'}
 
   const config = {
     ...customConfig,
     headers: {
       ...headers,
-      ...customConfig.headers,
+      ...customConfig?.headers,
     },
   } as Request;
 
-	const response = await fetch(`${process.env.REACT_APP_API_URL}/${endpoint}`, config);
+	const response = await fetch(endpoint, config);
 
 	if(response.statusText === 'OK') {
 		const data = response.json();
 		return data;
 	} else {
 		const errorMessage = await response.text()
-		return new Error(errorMessage);
+		throw new Error(errorMessage);
 	}
 }
