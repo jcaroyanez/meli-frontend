@@ -1,6 +1,6 @@
 import { lazy } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
-import { ListItems } from '../compornents/Listing/ListItems/ListItems';
+import { ListItems } from '../components/Listing/ListItems/ListItems';
 
 const Home = lazy(() =>
   import('../pages/Home/Home').then(({ Home }) => ({ default: Home })),

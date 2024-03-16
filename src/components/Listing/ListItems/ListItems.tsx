@@ -26,7 +26,7 @@ export const ListItems = () => {
         {isLoading ? (
           <Skeleton style={{ marginTop: 10 }} />
         ) : (
-          <BreadCrumbs categories={data?.categories} />
+          <BreadCrumbs categories={data?.categories as string[]} />
         )}
         {isLoading ? (
           <SkeletonList />

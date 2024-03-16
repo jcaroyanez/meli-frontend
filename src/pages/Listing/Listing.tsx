@@ -1,6 +1,6 @@
 import { Outlet, useNavigate, useSearchParams } from 'react-router-dom';
-import { Header } from '../../compornents/Header/Header';
-import { Search } from '../../compornents/Search/Search';
+import { Header } from '../../components/Header/Header';
+import { Search } from '../../components/Search/Search';
 import { onInputValue } from './helpers-listing';
 import { Container } from '../../shared/Container/Container';
 import './Listing.scss';
