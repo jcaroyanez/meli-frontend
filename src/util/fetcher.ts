@@ -1,5 +1,8 @@
-export async function fetcher<T>(endpoint: string, customConfig = {} as Request): Promise<T> {
-  const headers = {'content-type': 'application/json'}
+export async function fetcher<T>(
+  endpoint: string,
+  customConfig = {} as Request,
+): Promise<T> {
+  const headers = { 'content-type': 'application/json' };
 
   const config = {
     ...customConfig,
@@ -9,13 +12,13 @@ export async function fetcher<T>(endpoint: string, customConfig = {} as Request)
     },
   } as Request;
 
-	const response = await fetch(endpoint, config);
+  const response = await fetch(endpoint, config);
 
-	if(response.statusText === 'OK') {
-		const data = response.json();
-		return data;
-	} else {
-		const errorMessage = await response.text()
-		throw new Error(errorMessage);
-	}
+  if (response.statusText === 'OK') {
+    const data = response.json();
+    return data;
+  } else {
+    const errorMessage = await response.text();
+    throw new Error(errorMessage);
+  }
 }

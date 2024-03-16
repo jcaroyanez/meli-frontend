@@ -19,8 +19,8 @@ export interface Item {
 }
 
 export interface ItemDetail extends Item {
-	description?: string;
-	soldquantity?: string;
+  description?: string;
+  soldquantity?: string;
 }
 
 export interface ResponseItems {
@@ -30,6 +30,6 @@ export interface ResponseItems {
 }
 
 export interface ResponseDetail {
-	author: Author;
-	item: ItemDetail;
+  author: Author;
+  item: ItemDetail;
 }

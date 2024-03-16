@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const { override, addWebpackModuleRule } = require('customize-cra');
 
 module.exports = override(
@@ -12,9 +13,9 @@ module.exports = override(
           sourceMap: true,
           additionalData: `
             @import "src/styles/_variables.scss";
-          `
-        }
-      }
-    ]
-  })
+          `,
+        },
+      },
+    ],
+  }),
 );
