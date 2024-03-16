@@ -1,6 +1,6 @@
 import { URL_BASE_API } from '../definitions/constants'
 import { ResponseDetail, ResponseItems } from '../definitions/model';
-import { fetcher } from '../util/fecher'
+import { fetcher } from '../util/fetcher';
 
 export async function itemsFetch (query: string): Promise<ResponseItems> {
     const response = await fetcher<ResponseItems>(`${URL_BASE_API}?q=${query}`);

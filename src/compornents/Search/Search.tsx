@@ -1,46 +1,30 @@
 import { useState } from 'react'
 import IcSearch from '../uiCons/UICsearch/UICsearch'
 import './Search.scss'
+import { handlerChange, handlerKeyDown, handlerSubmit } from './helper-search';
 
 interface SearchProps {
 	onInputValue?: (query: string) => void;
 	inputValue?: string;
 }
 
-export const Search = ({ onInputValue = () => { return }, inputValue = ''}: SearchProps) => {
-  const [textInput, setTextInput] = useState()
-
-  const handlerSubmit = (e?: any) => {
-    e?.preventDefault()
-
-    if (textInput) {
-      onInputValue(textInput)
-    }
-  }
-
-  const handlerChange = (event: any) => {
-    setTextInput(event.target.value)
-  }
-
-	const handlerKeyDown = (event: any) => {
-		if(event.keyCode === 13) {
-			handlerSubmit()
-		}
-	}
+export const Search = ({ onInputValue = (query: string) => { return }, inputValue = ''}: SearchProps) => {
+  const [textInput, setTextInput] = useState<string>('')
 
   return (
-    <form onSubmit={handlerSubmit} className='content-search'>
+    <form onSubmit={handlerSubmit(textInput, onInputValue)} name='search' className='content-search'>
       <input
         key={inputValue}
         defaultValue={inputValue}
-        onChange={handlerChange}
-				onKeyDown={handlerKeyDown}
+        onChange={handlerChange(setTextInput)}
+				onKeyDown={handlerKeyDown(textInput, onInputValue)}
         autoCorrect='off'
         autoComplete='off'
         className='search-input'
         name='textInput'
         placeholder='Nunca dejes de buscar'
         aria-label='Ingresa lo que quieras encontrar'
+				data-testid='search'
       />
 
       <button className='search-btn' aria-label='Buscar'>
@@ -49,5 +33,3 @@ export const Search = ({ onInputValue = () => { return }, inputValue = ''}: Sear
     </form>
   )
 }
-
-export default Search

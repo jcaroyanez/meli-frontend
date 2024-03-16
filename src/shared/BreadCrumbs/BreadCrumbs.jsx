@@ -9,7 +9,7 @@ export const BreadCrumbs = ({ categories }) => {
     <nav>
       <ol className='nav-breadcrumbs'>
         {categories?.map((category, index) =>
-          <Link to={`/items?query=${category}`} key={index} className='nav-breadcrumbs__item'>
+          <Link to={`/items?search=${category}`} key={index} className='nav-breadcrumbs__item'>
             <span className='nav-breadcrumbs__text'>{category}</span>
             {lastIndex !== index &&
               <div className='nav-breadcrumbs__arrow'>

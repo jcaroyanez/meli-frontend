@@ -14,7 +14,7 @@ export const ListItems = () => {
 	return (
 		<>
 			<Helmet>
-				<title>{query} | Mercado Libre</title>
+				<title>{`${query} | Mercado Libre`}</title>
 				<meta name='description' content={query as string} />
 			</Helmet>
 			<>
