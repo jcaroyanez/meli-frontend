@@ -5,13 +5,15 @@
 
 ### `npm start`
 
-Ejecuta la aplicación en modo de desarrollo.
-en la url [http://localhost:3000](http://localhost:3000)
+Ejecuta la aplicación en modo de desarrollo. correrá en la siguiente url [http://localhost:3000](http://localhost:3000)
 
 ### `npm test`
 
-el proyecto se le agregaron algunos test pueden ponerse a correr con el comando anterior mencionado.
+al proyecto se le agregaron algunos test.
 
 # Cambiar url base de la api
 
 si se requiere cambiar el valor de la url de la api se encuentra en `src\definitions\constants.ts` la variable es `URL_BASE_API`
+
+#### repositorio de la api
+[https://github.com/jcaroyanez/meli-api](https://github.com/jcaroyanez/meli-api)
